@@ -37,7 +37,7 @@ const handleSubmit=async(e)=>{
 }
   try{
     setLoading(true);
-    const res=await fetch(`http://localhost:4000/task/update/${params.id}`,{
+    const res=await fetch(`${process.env.REACT_APP_BACKEND_URL}/task/update/${params.id}`,{
       method:"PUT",
       headers
       :{"Content-Type":"application/json"},
