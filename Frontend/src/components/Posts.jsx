@@ -14,7 +14,7 @@ function Posts() {
    const getTasks=async()=>{
     try{
         setLoading(true);
-        const res = await fetch("http://localhost:4000/task");
+        const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/task`);
         const data=await res.json();
         setPost(data);
 
@@ -31,7 +31,7 @@ function Posts() {
         return;
     }
     try{
-        const res=await fetch(`http://localhost:4000/task/delete/${id}`,{method:"DELETE"})
+        const res=await fetch(`${process.env.REACT_APP_BACKEND_URL}/task/delete/${id}`,{method:"DELETE"})
         if(res.ok){
             await getTasks()
         }
