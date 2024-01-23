@@ -23,7 +23,7 @@ const handleSubmit=async(e)=>{
 }
   try{
     setLoading(true);
-    const res=await fetch("http://localhost:4000/task/create",{
+    const res=await fetch("${process.env.REACT_APP_BACKEND_URL}/task/create`,{
       method:"POST",
       headers
       :{"Content-Type":"application/json"},
