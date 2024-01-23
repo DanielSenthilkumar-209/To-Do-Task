@@ -12,7 +12,7 @@ const [description,setDescription]=useState();
 
 const getTask=async()=>{
     try{
-    const res= await fetch(`http://localhost:4000/task/find/${params.id}`,
+    const res= await fetch(`${process.env.REACT_APP_BACKEND_URL}/task/find/${params.id}`,
     {
         headers:
         {"Content-Type":"application/json",},
