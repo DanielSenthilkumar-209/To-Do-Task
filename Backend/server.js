@@ -17,4 +17,4 @@ mongoose.connect(process.env.MONGO_DB)
 
 app.get('/welcome',(req,res)=>{res.json("Welcome")})
 
-app.use('/task',taskRoutes);
+app.use('/',taskRoutes);
