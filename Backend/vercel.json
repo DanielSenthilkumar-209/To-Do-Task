@@ -1,6 +1,6 @@
 {
   "version":1,
   "name":"task-app"
-  "build":[{"src":"*.js","use":"@vercel/node"}],
+  "builds":[{"src":"*.js","use":"@vercel/node"}],
   "routes":[{"src":"/(.*)","dest":"/"}]
 }
